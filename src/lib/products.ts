@@ -35,12 +35,26 @@ export const products: Product[] = [
       en: 'Zoomlion QTZ63 tower crane in excellent condition, fully maintained. Suitable for medium-scale construction projects.',
       zh: '中联重科QTZ63塔吊，状态优秀，保养完善。适用于中型建筑工程项目。',
     },
-    features: [
-      'Biến tần điều khiển',
-      'Hệ thống an toàn hiện đại',
-      'Khởi động mềm',
-      'Cân bằng tự động',
-    ],
+    features: {
+      vi: [
+        'Biến tần điều khiển',
+        'Hệ thống an toàn hiện đại',
+        'Khởi động mềm',
+        'Cân bằng tự động',
+      ],
+      en: [
+        'Frequency control',
+        'Modern safety system',
+        'Soft start',
+        'Auto balancing',
+      ],
+      zh: [
+        '变频控制',
+        '现代安全系统',
+        '软启动',
+        '自动平衡',
+      ],
+    },
   },
   {
     id: '2',
@@ -66,12 +80,26 @@ export const products: Product[] = [
       en: 'XCMG TC6013 tower crane in good condition, stable operation. Fully safety inspected.',
       zh: '徐工TC6013塔吊，状态良好，运行稳定。安全检测完善。',
     },
-    features: [
-      'Thanh chống cánh tay',
-      'Hệ thống chống va đập',
-      'Điều khiển từ xa',
-      'Khóa an toàn',
-    ],
+    features: {
+      vi: [
+        'Thanh chống cánh tay',
+        'Hệ thống chống va đập',
+        'Điều khiển từ xa',
+        'Khóa an toàn',
+      ],
+      en: [
+        'Jib support bar',
+        'Anti-collision system',
+        'Remote control',
+        'Safety lock',
+      ],
+      zh: [
+        '臂架支撑杆',
+        '防碰撞系统',
+        '远程控制',
+        '安全锁',
+      ],
+    },
   },
   {
     id: '3',
@@ -97,12 +125,26 @@ export const products: Product[] = [
       en: 'SANY QTZ80 tower crane, latest model in excellent condition. Suitable for high-rise construction.',
       zh: '三一重工QTZ80塔吊，最新型号，状态优秀。适用于高层建筑工程。',
     },
-    features: [
-      'Công nghệ kiểm soát thông minh',
-      'Hệ thống giám sát tải trọng',
-      'Chống gió tự động',
-      'Màn hình cảm ứng',
-    ],
+    features: {
+      vi: [
+        'Công nghệ kiểm soát thông minh',
+        'Hệ thống giám sát tải trọng',
+        'Chống gió tự động',
+        'Màn hình cảm ứng',
+      ],
+      en: [
+        'Intelligent control technology',
+        'Load monitoring system',
+        'Auto wind resistance',
+        'Touch screen',
+      ],
+      zh: [
+        '智能控制技术',
+        '负载监控系统',
+        '自动抗风',
+        '触摸屏',
+      ],
+    },
   },
   {
     id: '4',
@@ -128,12 +170,26 @@ export const products: Product[] = [
       en: 'Zoomlion QTZ40 tower crane in fair condition, reasonable price. Suitable for small projects.',
       zh: '中联重科QTZ40塔吊，状态一般，价格合理。适用于小型工程项目。',
     },
-    features: [
-      'Khởi động trực tiếp',
-      'Hệ thống an toàn tiêu chuẩn',
-      'Dễ vận hành',
-      'Tiết kiệm năng lượng',
-    ],
+    features: {
+      vi: [
+        'Khởi động trực tiếp',
+        'Hệ thống an toàn tiêu chuẩn',
+        'Dễ vận hành',
+        'Tiết kiệm năng lượng',
+      ],
+      en: [
+        'Direct start',
+        'Standard safety system',
+        'Easy to operate',
+        'Energy saving',
+      ],
+      zh: [
+        '直接启动',
+        '标准安全系统',
+        '易于操作',
+        '节能',
+      ],
+    },
   },
   {
     id: '5',
@@ -159,12 +215,26 @@ export const products: Product[] = [
       en: 'XCMG TC5610 tower crane in good condition with high performance. Regularly maintained.',
       zh: '徐工TC5610塔吊，状态良好，性能优异。定期保养。',
     },
-    features: [
-      'Biến tần tiết kiệm điện',
-      'Hệ thống giới hạn mô-men xoắn',
-      'Cảnh báo quá tải',
-      'Điều khiển tinh vi',
-    ],
+    features: {
+      vi: [
+        'Biến tần tiết kiệm điện',
+        'Hệ thống giới hạn mô-men xoắn',
+        'Cảnh báo quá tải',
+        'Điều khiển tinh vi',
+      ],
+      en: [
+        'Energy-saving inverter',
+        'Torque limit system',
+        'Overload warning',
+        'Precision control',
+      ],
+      zh: [
+        '节能变频器',
+        '扭矩限制系统',
+        '超载警告',
+        '精密控制',
+      ],
+    },
   },
   {
     id: '6',
@@ -190,12 +260,26 @@ export const products: Product[] = [
       en: 'SANY QTZ125 tower crane with large capacity in excellent condition. For large-scale projects.',
       zh: '三一重工QTZ125塔吊，大功率，状态优秀。适用于大型工程项目。',
     },
-    features: [
-      'Công nghệ kiểm soát thông minh',
-      'Hệ thống giám sát tải trọng',
-      'Chống vặn cánh tay',
-      'An toàn tối đa',
-    ],
+    features: {
+      vi: [
+        'Công nghệ kiểm soát thông minh',
+        'Hệ thống giám sát tải trọng',
+        'Chống vặn cánh tay',
+        'An toàn tối đa',
+      ],
+      en: [
+        'Intelligent control technology',
+        'Load monitoring system',
+        'Anti-twist jib',
+        'Maximum safety',
+      ],
+      zh: [
+        '智能控制技术',
+        '负载监控系统',
+        '防扭臂',
+        '最大安全性',
+      ],
+    },
   },
 ];
 

@@ -22,7 +22,11 @@ export interface Product {
     en: string;
     zh: string;
   };
-  features: string[];
+  features: {
+    vi: string[];
+    en: string[];
+    zh: string[];
+  };
 }
 
 export interface ContactForm {

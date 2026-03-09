@@ -86,6 +86,18 @@ export const translations = {
     'cta.title': 'Cần tư vấn về sản phẩm?',
     'cta.subtitle': 'Liên hệ ngay với chúng tôi để được tư vấn miễn phí và nhận báo giá chi tiết',
     'cta.button': 'Liên hệ ngay',
+    
+    // Product Detail
+    'product.back': 'Quay lại',
+    'product.price_label': 'Giá bán',
+    'product.description': 'Mô tả',
+    'product.features': 'Đặc điểm nổi bật',
+    'product.call_now': 'Gọi ngay',
+    'product.max_load': 'Tải trọng tối đa',
+    'product.max_radius': 'Bán kính tối đa',
+    'product.tip_load': 'Tải trọng đầu cánh',
+    'product.jib_length': 'Độ dài cánh tay',
+    'product.mast_height': 'Chiều cao tháp',
   },
   en: {
     // Navigation
@@ -174,6 +186,18 @@ export const translations = {
     'cta.title': 'Need product consultation?',
     'cta.subtitle': 'Contact us now for free consultation and detailed quotation',
     'cta.button': 'Contact Us',
+    
+    // Product Detail
+    'product.back': 'Back',
+    'product.price_label': 'Price',
+    'product.description': 'Description',
+    'product.features': 'Key Features',
+    'product.call_now': 'Call Now',
+    'product.max_load': 'Max Load',
+    'product.max_radius': 'Max Radius',
+    'product.tip_load': 'Tip Load',
+    'product.jib_length': 'Jib Length',
+    'product.mast_height': 'Mast Height',
   },
   zh: {
     // Navigation
@@ -262,6 +286,18 @@ export const translations = {
     'cta.title': '需要产品咨询？',
     'cta.subtitle': '立即联系我们获取免费咨询和详细报价',
     'cta.button': '联系我们',
+    
+    // Product Detail
+    'product.back': '返回',
+    'product.price_label': '售价',
+    'product.description': '描述',
+    'product.features': '产品特点',
+    'product.call_now': '立即拨打',
+    'product.max_load': '最大载重',
+    'product.max_radius': '最大工作半径',
+    'product.tip_load': '端部载荷',
+    'product.jib_length': '臂长',
+    'product.mast_height': '塔高',
   },
 } as const;
 

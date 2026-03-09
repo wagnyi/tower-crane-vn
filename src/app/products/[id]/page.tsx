@@ -34,14 +34,31 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
     fair: 'bg-yellow-500',
   };
 
-  const formatPrice = (price: number, currency: string) => {
-    if (currency === 'VND') {
+  const formatPrice = (price: number, currency: string, lang: string) => {
+    if (lang === 'vi') {
       return `${(price / 1000000).toFixed(0)} triệu VND`;
-    } else if (currency === 'USD') {
-      return `$${(price / 1000).toFixed(0)}K`;
+    } else if (lang === 'en') {
+      const usdPrice = Math.round(price / 24000);
+      return `$${usdPrice.toLocaleString()}`;
     } else {
-      return `¥${(price / 10000).toFixed(0)}万`;
+      const cnyPrice = Math.round(price / 3300);
+      return `¥${cnyPrice.toLocaleString()}`;
     }
+  };
+
+  // 地点多语言映射
+  const locationTranslations: Record<string, { vi: string; en: string; zh: string }> = {
+    'Hà Nội': { vi: 'Hà Nội', en: 'Hanoi', zh: '河内' },
+    'TP. Hồ Chí Minh': { vi: 'TP. Hồ Chí Minh', en: 'Ho Chi Minh City', zh: '胡志明市' },
+    'Đà Nẵng': { vi: 'Đà Nẵng', en: 'Da Nang', zh: '岘港' },
+  };
+
+  const getLocation = (location: string, lang: string) => {
+    const translations = locationTranslations[location];
+    if (translations) {
+      return translations[lang as keyof typeof translations] || location;
+    }
+    return location;
   };
 
   return (
@@ -50,7 +67,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
       <Link href="/products">
         <Button variant="ghost" size="sm" className="mb-6 gap-2">
           <ArrowLeft className="h-4 w-4" />
-          Quay lại
+          {t('product.back')}
         </Button>
       </Link>
 
@@ -97,7 +114,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
             <div className="flex items-center gap-4 text-muted-foreground">
               <div className="flex items-center gap-1">
                 <MapPin className="h-4 w-4" />
-                <span>{product.location}</span>
+                <span>{getLocation(product.location, language)}</span>
               </div>
               <div className="flex items-center gap-1">
                 <Calendar className="h-4 w-4" />
@@ -108,15 +125,15 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
 
           {/* Price */}
           <div className="bg-muted/30 p-6 rounded-lg">
-            <div className="text-sm text-muted-foreground mb-1">Giá bán</div>
+            <div className="text-sm text-muted-foreground mb-1">{t('product.price_label')}</div>
             <div className="text-4xl font-bold text-primary">
-              {formatPrice(product.price, product.currency)}
+              {formatPrice(product.price, product.currency, language)}
             </div>
           </div>
 
           {/* Description */}
           <div>
-            <h3 className="font-semibold mb-2">Mô tả</h3>
+            <h3 className="font-semibold mb-2">{t('product.description')}</h3>
             <p className="text-muted-foreground">
               {product.description[language]}
             </p>
@@ -124,9 +141,9 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
 
           {/* Features */}
           <div>
-            <h3 className="font-semibold mb-3">Đặc điểm nổi bật</h3>
+            <h3 className="font-semibold mb-3">{t('product.features')}</h3>
             <div className="grid grid-cols-2 gap-2">
-              {product.features.map((feature, index) => (
+              {product.features[language].map((feature, index) => (
                 <div key={index} className="flex items-start gap-2">
                   <CheckCircle2 className="h-4 w-4 text-primary mt-0.5" />
                   <span className="text-sm">{feature}</span>
@@ -145,7 +162,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
             </Link>
             <Button size="lg" variant="outline" className="gap-2">
               <Phone className="h-4 w-4" />
-              Gọi ngay
+              {t('product.call_now')}
             </Button>
           </div>
         </div>
@@ -159,23 +176,23 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
         <CardContent>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
             <div>
-              <div className="text-sm text-muted-foreground">Tải trọng tối đa</div>
+              <div className="text-sm text-muted-foreground">{t('product.max_load')}</div>
               <div className="text-xl font-semibold">{product.specifications.maxLoad} {t('common.ton')}</div>
             </div>
             <div>
-              <div className="text-sm text-muted-foreground">Bán kính tối đa</div>
+              <div className="text-sm text-muted-foreground">{t('product.max_radius')}</div>
               <div className="text-xl font-semibold">{product.specifications.maxRadius} {t('common.meter')}</div>
             </div>
             <div>
-              <div className="text-sm text-muted-foreground">Tải trọng đầu cánh</div>
+              <div className="text-sm text-muted-foreground">{t('product.tip_load')}</div>
               <div className="text-xl font-semibold">{product.specifications.tipLoad} {t('common.ton')}</div>
             </div>
             <div>
-              <div className="text-sm text-muted-foreground">Độ dài cánh tay</div>
+              <div className="text-sm text-muted-foreground">{t('product.jib_length')}</div>
               <div className="text-xl font-semibold">{product.specifications.jibLength} {t('common.meter')}</div>
             </div>
             <div>
-              <div className="text-sm text-muted-foreground">Chiều cao tháp</div>
+              <div className="text-sm text-muted-foreground">{t('product.mast_height')}</div>
               <div className="text-xl font-semibold">{product.specifications.mastHeight} {t('common.meter')}</div>
             </div>
           </div>
