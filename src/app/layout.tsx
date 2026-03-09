@@ -43,6 +43,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="vi" suppressHydrationWarning>
+      <meta name="google-site-verification" content="QU2Q8mtbhzVj8zK-LyM0LDlvkalRm2kAUQdjBKjAieY" />
       <body className="antialiased min-h-screen flex flex-col">
         <LanguageProvider>
           <Navigation />
