@@ -14,6 +14,7 @@ export const products: Product[] = [
     location: 'Hà Nội',
     images: [
       'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80',
+      'https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&q=80',
     ],
     specifications: {
       maxRadius: 50,
@@ -46,6 +47,7 @@ export const products: Product[] = [
     currency: 'VND',
     location: 'TP. Hồ Chí Minh',
     images: [
+      'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80',
       'https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&q=80',
     ],
     specifications: {
@@ -79,7 +81,8 @@ export const products: Product[] = [
     currency: 'VND',
     location: 'Hà Nội',
     images: [
-      'https://images.unsplash.com/photo-1578496479914-7ef3b0193be3?w=800&q=80',
+      'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80',
+      'https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&q=80',
     ],
     specifications: {
       maxRadius: 55,
@@ -112,7 +115,8 @@ export const products: Product[] = [
     currency: 'VND',
     location: 'Đà Nẵng',
     images: [
-      'https://images.unsplash.com/photo-1590496793929-36417d3117de?w=800&q=80',
+      'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80',
+      'https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&q=80',
     ],
     specifications: {
       maxRadius: 45,
@@ -145,7 +149,8 @@ export const products: Product[] = [
     currency: 'VND',
     location: 'TP. Hồ Chí Minh',
     images: [
-      'https://images.unsplash.com/photo-1598301257942-e6bde1d2149b?w=800&q=80',
+      'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80',
+      'https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&q=80',
     ],
     specifications: {
       maxRadius: 56,
@@ -178,7 +183,8 @@ export const products: Product[] = [
     currency: 'VND',
     location: 'Hà Nội',
     images: [
-      'https://images.unsplash.com/photo-1612810806563-4cb8265db55f?w=800&q=80',
+      'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80',
+      'https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&q=80',
     ],
     specifications: {
       maxRadius: 60,
