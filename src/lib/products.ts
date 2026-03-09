@@ -1,8 +1,14 @@
 import { Product } from './types';
 
-// 使用统一的塔吊图片
-const TOWER_CRANE_IMAGE = 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&h=450&fit=crop&auto=format';
-const TOWER_CRANE_IMAGE_2 = 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&h=450&fit=crop&auto=format';
+// 产品图片（上传到对象存储）
+const PRODUCT_IMAGES = [
+  'https://coze-coding-project.tos.coze.site/coze_storage_7615077456340451363/tower-crane/1_c826caf9.webp?sign=2088412667-511d193828-0-ab60858211f3051ea7d77c90d14e964e5ca62fa28cfbe3b168d571ca31f975cb',
+  'https://coze-coding-project.tos.coze.site/coze_storage_7615077456340451363/tower-crane/2_f93a4559.jpg?sign=2088412667-e5e70043ca-0-75b2a4db9f323bfe24d67726e4957f1d22fa7cafbce077b2cced807ee8e647f8',
+  'https://coze-coding-project.tos.coze.site/coze_storage_7615077456340451363/tower-crane/3_b69f8d67.jpg?sign=2088412667-36c46179e6-0-a8fcc34c3b3dec2cb47a892644af981871fedfe3312c726affbe8e10954f1b1b',
+  'https://coze-coding-project.tos.coze.site/coze_storage_7615077456340451363/tower-crane/4_b2e74290.jpg?sign=2088412667-3a61564088-0-d839ab2642e7786cb07f86a0b7b38379ba06a5bc0a846ad87338d09c1dc2f51e',
+  'https://coze-coding-project.tos.coze.site/coze_storage_7615077456340451363/tower-crane/5_d19bdbbe.jpg?sign=2088412668-b285d591a5-0-3db9a81e21f275b7a4761b8e4c05e64b1fe18e34c7b071cbc492fe5d287b692e',
+  'https://coze-coding-project.tos.coze.site/coze_storage_7615077456340451363/tower-crane/6_2fe7c447.jpg?sign=2088412668-5f361e3f07-0-9ca2d957fd2ec54ffbd2465e008df565a97b575cf58b36a618be5457b4a17db6',
+];
 
 export const products: Product[] = [
   {
@@ -16,7 +22,7 @@ export const products: Product[] = [
     price: 1850000000,
     currency: 'VND',
     location: 'Hà Nội',
-    images: [TOWER_CRANE_IMAGE, TOWER_CRANE_IMAGE_2],
+    images: [PRODUCT_IMAGES[0]],
     specifications: {
       maxRadius: 50,
       maxLoad: 6,
@@ -47,7 +53,7 @@ export const products: Product[] = [
     price: 1650000000,
     currency: 'VND',
     location: 'TP. Hồ Chí Minh',
-    images: [TOWER_CRANE_IMAGE, TOWER_CRANE_IMAGE_2],
+    images: [PRODUCT_IMAGES[1]],
     specifications: {
       maxRadius: 60,
       maxLoad: 6,
@@ -78,7 +84,7 @@ export const products: Product[] = [
     price: 2200000000,
     currency: 'VND',
     location: 'Hà Nội',
-    images: [TOWER_CRANE_IMAGE, TOWER_CRANE_IMAGE_2],
+    images: [PRODUCT_IMAGES[2]],
     specifications: {
       maxRadius: 55,
       maxLoad: 8,
@@ -109,7 +115,7 @@ export const products: Product[] = [
     price: 1200000000,
     currency: 'VND',
     location: 'Đà Nẵng',
-    images: [TOWER_CRANE_IMAGE, TOWER_CRANE_IMAGE_2],
+    images: [PRODUCT_IMAGES[3]],
     specifications: {
       maxRadius: 45,
       maxLoad: 4,
@@ -140,7 +146,7 @@ export const products: Product[] = [
     price: 1750000000,
     currency: 'VND',
     location: 'TP. Hồ Chí Minh',
-    images: [TOWER_CRANE_IMAGE, TOWER_CRANE_IMAGE_2],
+    images: [PRODUCT_IMAGES[4]],
     specifications: {
       maxRadius: 56,
       maxLoad: 6,
@@ -171,7 +177,7 @@ export const products: Product[] = [
     price: 2800000000,
     currency: 'VND',
     location: 'Hà Nội',
-    images: [TOWER_CRANE_IMAGE, TOWER_CRANE_IMAGE_2],
+    images: [PRODUCT_IMAGES[5]],
     specifications: {
       maxRadius: 60,
       maxLoad: 10,
