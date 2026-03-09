@@ -13,7 +13,7 @@ export const products: Product[] = [
     currency: 'VND',
     location: 'Hà Nội',
     images: [
-      'https://coze-coding-project.tos.coze.site/coze_storage_7615077456340451363/image/generate_image_101c5810-7e20-4816-8c25-3eb7ddc929f2.jpeg',
+      'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80',
     ],
     specifications: {
       maxRadius: 50,
@@ -46,7 +46,7 @@ export const products: Product[] = [
     currency: 'VND',
     location: 'TP. Hồ Chí Minh',
     images: [
-      'https://coze-coding-project.tos.coze.site/coze_storage_7615077456340451363/image/generate_image_0f4e0eb9-aee4-4ac2-a0c1-a40abc7455f0.jpeg',
+      'https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&q=80',
     ],
     specifications: {
       maxRadius: 60,
@@ -79,7 +79,7 @@ export const products: Product[] = [
     currency: 'VND',
     location: 'Hà Nội',
     images: [
-      'https://coze-coding-project.tos.coze.site/coze_storage_7615077456340451363/image/generate_image_7e04fc0d-d007-4b22-8e4c-ee087b37c266.jpeg',
+      'https://images.unsplash.com/photo-1578496479914-7ef3b0193be3?w=800&q=80',
     ],
     specifications: {
       maxRadius: 55,
@@ -112,7 +112,7 @@ export const products: Product[] = [
     currency: 'VND',
     location: 'Đà Nẵng',
     images: [
-      'https://coze-coding-project.tos.coze.site/coze_storage_7615077456340451363/image/generate_image_28908a38-c8d3-4e9a-8e6a-fa9386299fa5.jpeg',
+      'https://images.unsplash.com/photo-1590496793929-36417d3117de?w=800&q=80',
     ],
     specifications: {
       maxRadius: 45,
@@ -145,7 +145,7 @@ export const products: Product[] = [
     currency: 'VND',
     location: 'TP. Hồ Chí Minh',
     images: [
-      'https://coze-coding-project.tos.coze.site/coze_storage_7615077456340451363/image/generate_image_29825060-1594-433d-bc88-b46b1e9d0b7a.jpeg',
+      'https://images.unsplash.com/photo-1598301257942-e6bde1d2149b?w=800&q=80',
     ],
     specifications: {
       maxRadius: 56,
@@ -178,7 +178,7 @@ export const products: Product[] = [
     currency: 'VND',
     location: 'Hà Nội',
     images: [
-      'https://coze-coding-project.tos.coze.site/coze_storage_7615077456340451363/image/generate_image_f8e490ab-012f-4ffd-993d-8177d1509761.jpeg',
+      'https://images.unsplash.com/photo-1612810806563-4cb8265db55f?w=800&q=80',
     ],
     specifications: {
       maxRadius: 60,
