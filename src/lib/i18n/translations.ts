@@ -26,6 +26,7 @@ export const translations = {
     'products.condition': 'Tình trạng',
     'products.year': 'Năm sản xuất',
     'products.location': 'Vị trí',
+    'products.subtitle': 'Cần trục tháp chất lượng cao từ các thương hiệu hàng đầu',
     
     // Product Conditions
     'condition.excellent': 'Xuất sắc',
@@ -66,6 +67,21 @@ export const translations = {
     'common.meter': 'mét',
     'common.loading': 'Đang tải...',
     'common.error': 'Lỗi',
+    
+    // Features
+    'features.delivery.title': 'Giao hàng toàn quốc',
+    'features.delivery.desc': 'Hỗ trợ vận chuyển đến mọi tỉnh thành Việt Nam',
+    'features.warranty.title': 'Bảo hành 12 tháng',
+    'features.warranty.desc': 'Cam kết bảo hành và hỗ trợ kỹ thuật sau bán hàng',
+    'features.support.title': 'Hỗ trợ 24/7',
+    'features.support.desc': 'Đội ngũ kỹ thuật luôn sẵn sàng hỗ trợ khách hàng',
+    'features.quality.title': 'Chất lượng đảm bảo',
+    'features.quality.desc': 'Tất cả sản phẩm đều được kiểm định chất lượng',
+    
+    // CTA section
+    'cta.title': 'Cần tư vấn về sản phẩm?',
+    'cta.subtitle': 'Liên hệ ngay với chúng tôi để được tư vấn miễn phí và nhận báo giá chi tiết',
+    'cta.button': 'Liên hệ ngay',
   },
   en: {
     // Navigation
@@ -94,6 +110,7 @@ export const translations = {
     'products.condition': 'Condition',
     'products.year': 'Year',
     'products.location': 'Location',
+    'products.subtitle': 'High quality tower cranes from leading brands',
     
     // Product Conditions
     'condition.excellent': 'Excellent',
@@ -134,6 +151,21 @@ export const translations = {
     'common.meter': 'meter',
     'common.loading': 'Loading...',
     'common.error': 'Error',
+    
+    // Features
+    'features.delivery.title': 'Nationwide Delivery',
+    'features.delivery.desc': 'Support transportation to all provinces in Vietnam',
+    'features.warranty.title': '12-Month Warranty',
+    'features.warranty.desc': 'Commitment to warranty and technical support after sales',
+    'features.support.title': '24/7 Support',
+    'features.support.desc': 'Technical team always ready to support customers',
+    'features.quality.title': 'Quality Guaranteed',
+    'features.quality.desc': 'All products are quality inspected',
+    
+    // CTA section
+    'cta.title': 'Need product consultation?',
+    'cta.subtitle': 'Contact us now for free consultation and detailed quotation',
+    'cta.button': 'Contact Us',
   },
   zh: {
     // Navigation
@@ -162,6 +194,7 @@ export const translations = {
     'products.condition': '状态',
     'products.year': '生产年份',
     'products.location': '所在地',
+    'products.subtitle': '来自顶尖品牌的高质量塔吊',
     
     // Product Conditions
     'condition.excellent': '优秀',
@@ -202,6 +235,21 @@ export const translations = {
     'common.meter': '米',
     'common.loading': '加载中...',
     'common.error': '错误',
+    
+    // Features
+    'features.delivery.title': '全国配送',
+    'features.delivery.desc': '支持运输到越南所有省市',
+    'features.warranty.title': '12个月保修',
+    'features.warranty.desc': '承诺保修和售后技术支持',
+    'features.support.title': '24/7支持',
+    'features.support.desc': '技术团队随时准备为客户提供支持',
+    'features.quality.title': '质量保证',
+    'features.quality.desc': '所有产品均经过质量检验',
+    
+    // CTA section
+    'cta.title': '需要产品咨询？',
+    'cta.subtitle': '立即联系我们获取免费咨询和详细报价',
+    'cta.button': '联系我们',
   },
 } as const;
 

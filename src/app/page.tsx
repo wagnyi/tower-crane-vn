@@ -15,23 +15,23 @@ export default function Home() {
   const features = [
     {
       icon: Truck,
-      title: 'Giao hàng toàn quốc',
-      description: 'Hỗ trợ vận chuyển đến mọi tỉnh thành Việt Nam',
+      titleKey: 'features.delivery.title',
+      descKey: 'features.delivery.desc',
     },
     {
       icon: Shield,
-      title: 'Bảo hành 12 tháng',
-      description: 'Cam kết bảo hành và hỗ trợ kỹ thuật sau bán hàng',
+      titleKey: 'features.warranty.title',
+      descKey: 'features.warranty.desc',
     },
     {
       icon: Headphones,
-      title: 'Hỗ trợ 24/7',
-      description: 'Đội ngũ kỹ thuật luôn sẵn sàng hỗ trợ khách hàng',
+      titleKey: 'features.support.title',
+      descKey: 'features.support.desc',
     },
     {
       icon: Award,
-      title: 'Chất lượng đảm bảo',
-      description: 'Tất cả sản phẩm đều được kiểm định chất lượng',
+      titleKey: 'features.quality.title',
+      descKey: 'features.quality.desc',
     },
   ];
 
@@ -52,8 +52,8 @@ export default function Home() {
                 <div className="p-3 bg-primary/10 rounded-lg mb-4">
                   <feature.icon className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="font-semibold mb-2">{feature.title}</h3>
-                <p className="text-sm text-muted-foreground">{feature.description}</p>
+                <h3 className="font-semibold mb-2">{t(feature.titleKey as any)}</h3>
+                <p className="text-sm text-muted-foreground">{t(feature.descKey as any)}</p>
               </div>
             ))}
           </div>
@@ -67,7 +67,7 @@ export default function Home() {
             <div>
               <h2 className="text-3xl font-bold">{t('products.title')}</h2>
               <p className="text-muted-foreground mt-2">
-                Cần trục tháp chất lượng cao từ các thương hiệu hàng đầu
+                {t('products.subtitle')}
               </p>
             </div>
             <Link href="/products">
@@ -90,14 +90,14 @@ export default function Home() {
       <section className="py-16 bg-primary text-primary-foreground">
         <div className="container px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">
-            Cần tư vấn về sản phẩm?
+            {t('cta.title')}
           </h2>
           <p className="text-lg mb-8 opacity-90 max-w-2xl mx-auto">
-            Liên hệ ngay với chúng tôi để được tư vấn miễn phí và nhận báo giá chi tiết
+            {t('cta.subtitle')}
           </p>
           <Link href="/contact">
             <Button size="lg" variant="secondary" className="gap-2">
-              Liên hệ ngay
+              {t('cta.button')}
               <ArrowRight className="h-4 w-4" />
             </Button>
           </Link>
