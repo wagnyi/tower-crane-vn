@@ -50,26 +50,28 @@ export function ProductCard({ product }: ProductCardProps) {
 
   return (
     <Card className="overflow-hidden hover:shadow-lg transition-shadow group">
-      {/* Image */}
-      <div className="relative aspect-[4/3] overflow-hidden bg-muted">
-        <img
-          src={product.images[0]}
-          alt={product.model}
-          className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
-          onError={(e) => {
-            const target = e.target as HTMLImageElement;
-            target.src = 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&h=450&fit=crop&auto=format';
-          }}
-        />
-        <div className="absolute top-3 left-3 flex gap-2">
-          <Badge className={conditionColors[product.condition]}>
-            {t(`condition.${product.condition}` as any)}
-          </Badge>
+      {/* Image - 可点击跳转到详情页 */}
+      <Link href={`/products/${product.id}`}>
+        <div className="relative aspect-[4/3] overflow-hidden bg-muted cursor-pointer">
+          <img
+            src={product.images[0]}
+            alt={product.model}
+            className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
+            onError={(e) => {
+              const target = e.target as HTMLImageElement;
+              target.src = 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&h=450&fit=crop&auto=format';
+            }}
+          />
+          <div className="absolute top-3 left-3 flex gap-2">
+            <Badge className={conditionColors[product.condition]}>
+              {t(`condition.${product.condition}` as any)}
+            </Badge>
+          </div>
+          <div className="absolute top-3 right-3">
+            <Badge variant="secondary">{product.year}</Badge>
+          </div>
         </div>
-        <div className="absolute top-3 right-3">
-          <Badge variant="secondary">{product.year}</Badge>
-        </div>
-      </div>
+      </Link>
 
       <CardContent className="p-5 space-y-3">
         {/* Title */}
