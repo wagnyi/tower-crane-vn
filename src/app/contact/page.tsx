@@ -41,16 +41,47 @@ function ContactForm() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    try {
+      // 调用邮件发送API
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          message: formData.message,
+          productId: productId || undefined,
+          productName: product ? `${product.brand} ${product.model}` : undefined,
+        }),
+      });
 
-    toast({
-      title: 'Thành công!',
-      description: t('contact.success'),
-    });
+      const result = await response.json();
 
-    setIsSubmitting(false);
-    setFormData({ name: '', email: '', phone: '', message: '' });
+      if (response.ok && result.success) {
+        toast({
+          title: t('contact.success'),
+          description: t('contact.success_desc'),
+        });
+        setFormData({ name: '', email: '', phone: '', message: '' });
+      } else {
+        toast({
+          title: t('contact.error'),
+          description: result.error || t('contact.error'),
+          variant: 'destructive',
+        });
+      }
+    } catch (error) {
+      toast({
+        title: t('contact.error'),
+        description: t('contact.error'),
+        variant: 'destructive',
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -131,7 +162,7 @@ function ContactForm() {
         {isSubmitting ? (
           <>
             <div className="h-4 w-4 animate-spin rounded-full border-2 border-current border-t-transparent" />
-            Đang gửi...
+            {t('contact.sending')}
           </>
         ) : (
           <>

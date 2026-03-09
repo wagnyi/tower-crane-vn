@@ -51,8 +51,10 @@ export const translations = {
     'contact.phone': 'Số điện thoại',
     'contact.message': 'Tin nhắn',
     'contact.submit': 'Gửi',
-    'contact.success': 'Tin nhắn đã được gửi thành công!',
+    'contact.success': 'Gửi thành công!',
+    'contact.success_desc': 'Chúng tôi đã nhận được tin nhắn của bạn và sẽ phản hồi sớm nhất.',
     'contact.error': 'Có lỗi xảy ra. Vui lòng thử lại.',
+    'contact.sending': 'Đang gửi...',
     
     // Footer
     'footer.description': 'Chuyên cung cấp cần trục tháp cũ chất lượng cao',
@@ -151,8 +153,10 @@ export const translations = {
     'contact.phone': 'Phone Number',
     'contact.message': 'Message',
     'contact.submit': 'Submit',
-    'contact.success': 'Message sent successfully!',
+    'contact.success': 'Sent successfully!',
+    'contact.success_desc': 'We have received your message and will respond as soon as possible.',
     'contact.error': 'An error occurred. Please try again.',
+    'contact.sending': 'Sending...',
     
     // Footer
     'footer.description': 'Specializing in high quality used tower cranes',
@@ -251,8 +255,10 @@ export const translations = {
     'contact.phone': '电话',
     'contact.message': '留言',
     'contact.submit': '提交',
-    'contact.success': '留言发送成功！',
+    'contact.success': '发送成功！',
+    'contact.success_desc': '我们已收到您的留言，将尽快回复您。',
     'contact.error': '发生错误，请重试。',
+    'contact.sending': '发送中...',
     
     // Footer
     'footer.description': '专业提供优质二手塔吊',
