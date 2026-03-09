@@ -13,8 +13,7 @@ export const products: Product[] = [
     currency: 'VND',
     location: 'Hà Nội',
     images: [
-      'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800',
-      'https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800',
+      'https://coze-coding-project.tos.coze.site/coze_storage_7615077456340451363/image/generate_image_101c5810-7e20-4816-8c25-3eb7ddc929f2.jpeg',
     ],
     specifications: {
       maxRadius: 50,
@@ -47,8 +46,7 @@ export const products: Product[] = [
     currency: 'VND',
     location: 'TP. Hồ Chí Minh',
     images: [
-      'https://images.unsplash.com/photo-1578496479914-7ef3b0193be3?w=800',
-      'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800',
+      'https://coze-coding-project.tos.coze.site/coze_storage_7615077456340451363/image/generate_image_0f4e0eb9-aee4-4ac2-a0c1-a40abc7455f0.jpeg',
     ],
     specifications: {
       maxRadius: 60,
@@ -81,8 +79,7 @@ export const products: Product[] = [
     currency: 'VND',
     location: 'Hà Nội',
     images: [
-      'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800',
-      'https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800',
+      'https://coze-coding-project.tos.coze.site/coze_storage_7615077456340451363/image/generate_image_7e04fc0d-d007-4b22-8e4c-ee087b37c266.jpeg',
     ],
     specifications: {
       maxRadius: 55,
@@ -115,8 +112,7 @@ export const products: Product[] = [
     currency: 'VND',
     location: 'Đà Nẵng',
     images: [
-      'https://images.unsplash.com/photo-1578496479914-7ef3b0193be3?w=800',
-      'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800',
+      'https://coze-coding-project.tos.coze.site/coze_storage_7615077456340451363/image/generate_image_28908a38-c8d3-4e9a-8e6a-fa9386299fa5.jpeg',
     ],
     specifications: {
       maxRadius: 45,
@@ -149,8 +145,7 @@ export const products: Product[] = [
     currency: 'VND',
     location: 'TP. Hồ Chí Minh',
     images: [
-      'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800',
-      'https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800',
+      'https://coze-coding-project.tos.coze.site/coze_storage_7615077456340451363/image/generate_image_29825060-1594-433d-bc88-b46b1e9d0b7a.jpeg',
     ],
     specifications: {
       maxRadius: 56,
@@ -183,8 +178,7 @@ export const products: Product[] = [
     currency: 'VND',
     location: 'Hà Nội',
     images: [
-      'https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800',
-      'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800',
+      'https://coze-coding-project.tos.coze.site/coze_storage_7615077456340451363/image/generate_image_f8e490ab-012f-4ffd-993d-8177d1509761.jpeg',
     ],
     specifications: {
       maxRadius: 60,
@@ -199,8 +193,8 @@ export const products: Product[] = [
       zh: '三一重工QTZ125塔吊，大功率，状态优秀。适用于大型工程项目。',
     },
     features: [
-      'Hệ thống điều khiển tự động',
-      'Giám sát tải trọng thời gian thực',
+      'Công nghệ kiểm soát thông minh',
+      'Hệ thống giám sát tải trọng',
       'Chống vặn cánh tay',
       'An toàn tối đa',
     ],
