@@ -49,7 +49,7 @@ export function Footer() {
             <div className="space-y-2 text-sm text-muted-foreground">
               <p><strong>{t('footer.address')}:</strong> Hà Nội, Việt Nam</p>
               <p><strong>{t('footer.phone')}:</strong> +84 123 456 789</p>
-              <p><strong>{t('footer.email')}:</strong> info@towerranevn.com</p>
+              <p><strong>{t('footer.email')}:</strong> wzm61788984@163.com</p>
             </div>
           </div>
 

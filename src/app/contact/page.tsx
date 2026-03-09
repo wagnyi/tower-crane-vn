@@ -161,7 +161,7 @@ export default function ContactPage() {
     {
       icon: Mail,
       title: t('footer.email'),
-      content: 'info@towerranevn.com',
+      content: 'wzm61788984@163.com',
     },
     {
       icon: Clock,
