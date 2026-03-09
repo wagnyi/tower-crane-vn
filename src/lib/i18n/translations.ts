@@ -12,6 +12,10 @@ export const translations = {
     'hero.subtitle': 'Chuyên cung cấp cần trục tháp cũ giá tốt, chất lượng đảm bảo',
     'hero.cta': 'Xem sản phẩm',
     'hero.learn_more': 'Tìm hiểu thêm',
+    'hero.quality_badge': 'Chất lượng đảm bảo',
+    'hero.certification': 'Chứng nhận',
+    'hero.warranty': 'Bảo hành',
+    'hero.warranty_period': '12 tháng',
     
     // Products
     'products.title': 'Sản phẩm nổi bật',
@@ -96,6 +100,10 @@ export const translations = {
     'hero.subtitle': 'Specializing in providing quality used tower cranes at competitive prices',
     'hero.cta': 'View Products',
     'hero.learn_more': 'Learn More',
+    'hero.quality_badge': 'Quality Guaranteed',
+    'hero.certification': 'Certified',
+    'hero.warranty': 'Warranty',
+    'hero.warranty_period': '12 Months',
     
     // Products
     'products.title': 'Featured Products',
@@ -180,6 +188,10 @@ export const translations = {
     'hero.subtitle': '专业提供高质量二手塔吊，价格合理，品质保证',
     'hero.cta': '查看产品',
     'hero.learn_more': '了解更多',
+    'hero.quality_badge': '质量保证',
+    'hero.certification': '认证',
+    'hero.warranty': '保修',
+    'hero.warranty_period': '12个月',
     
     // Products
     'products.title': '热门产品',

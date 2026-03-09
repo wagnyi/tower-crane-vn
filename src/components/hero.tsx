@@ -19,7 +19,7 @@ export function Hero() {
           <div className="space-y-6">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium">
               <Shield className="h-3.5 w-3.5" />
-              Chất lượng đảm bảo
+              {t('hero.quality_badge')}
             </div>
             
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight">
@@ -79,7 +79,7 @@ export function Hero() {
                   <Award className="h-5 w-5 text-primary" />
                 </div>
                 <div>
-                  <div className="text-sm font-semibold">Chứng nhận</div>
+                  <div className="text-sm font-semibold">{t('hero.certification')}</div>
                   <div className="text-xs text-muted-foreground">ISO 9001:2015</div>
                 </div>
               </div>
@@ -91,8 +91,8 @@ export function Hero() {
                   <Building2 className="h-5 w-5 text-primary" />
                 </div>
                 <div>
-                  <div className="text-sm font-semibold">Bảo hành</div>
-                  <div className="text-xs text-muted-foreground">12 tháng</div>
+                  <div className="text-sm font-semibold">{t('hero.warranty')}</div>
+                  <div className="text-xs text-muted-foreground">{t('hero.warranty_period')}</div>
                 </div>
               </div>
             </div>
