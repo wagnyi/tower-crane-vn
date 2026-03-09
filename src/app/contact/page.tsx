@@ -20,18 +20,49 @@ import {
 } from 'lucide-react';
 
 function ContactForm() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const searchParams = useSearchParams();
   const productId = searchParams.get('product');
   const product = productId ? getProductById(productId) : null;
   const { toast } = useToast();
+
+  // 地点多语言映射
+  const locationTranslations: Record<string, { vi: string; en: string; zh: string }> = {
+    'Hà Nội': { vi: 'Hà Nội', en: 'Hanoi', zh: '河内' },
+    'TP. Hồ Chí Minh': { vi: 'TP. Hồ Chí Minh', en: 'Ho Chi Minh City', zh: '胡志明市' },
+    'Đà Nẵng': { vi: 'Đà Nẵng', en: 'Da Nang', zh: '岘港' },
+  };
+
+  const getLocation = (location: string, lang: string) => {
+    const translations = locationTranslations[location];
+    if (translations) {
+      return translations[lang as keyof typeof translations] || location;
+    }
+    return location;
+  };
+
+  const formatPrice = (price: number, lang: string) => {
+    if (lang === 'vi') {
+      return `${(price / 1000000).toFixed(0)} triệu VND`;
+    } else if (lang === 'en') {
+      const usdPrice = Math.round(price / 24000);
+      return `$${usdPrice.toLocaleString()}`;
+    } else {
+      const cnyPrice = Math.round(price / 3300);
+      return `¥${cnyPrice.toLocaleString()}`;
+    }
+  };
 
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
     message: product 
-      ? `Tôi quan tâm đến sản phẩm ${product.brand} ${product.model} (${productId}). Vui lòng gửi báo giá chi tiết.`
+      ? language === 'zh' 
+        ? `我对产品 ${product.brand} ${product.model} (${productId}) 感兴趣。请发送详细报价。`
+        : language === 'en'
+        ? `I am interested in the product ${product.brand} ${product.model} (${productId}). Please send a detailed quotation.`
+        : `Tôi quan tâm đến sản phẩm ${product.brand} ${product.model} (${productId}). Vui lòng gửi báo giá chi tiết.`
       : '',
   });
 
@@ -89,7 +120,7 @@ function ContactForm() {
       {product && (
         <Card className="bg-muted/30">
           <CardContent className="pt-4">
-            <div className="text-sm text-muted-foreground mb-2">Sản phẩm bạn quan tâm:</div>
+            <div className="text-sm text-muted-foreground mb-2">{t('contact.product_interest')}</div>
             <div className="flex items-center gap-3">
               <img
                 src={product.images[0]}
@@ -99,7 +130,7 @@ function ContactForm() {
               <div>
                 <div className="font-semibold">{product.brand} {product.model}</div>
                 <Badge className="mt-1">
-                  {(product.price / 1000000).toFixed(0)} triệu VND
+                  {formatPrice(product.price, language)}
                 </Badge>
               </div>
             </div>
@@ -116,7 +147,7 @@ function ContactForm() {
             required
             value={formData.name}
             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-            placeholder="Nguyễn Văn A"
+            placeholder={language === 'zh' ? '请输入姓名' : language === 'en' ? 'Enter your name' : 'Nguyễn Văn A'}
           />
         </div>
         <div>
@@ -153,7 +184,7 @@ function ContactForm() {
           required
           value={formData.message}
           onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-          placeholder="Nhập tin nhắn của bạn..."
+          placeholder={language === 'zh' ? '请输入您的留言...' : language === 'en' ? 'Enter your message...' : 'Nhập tin nhắn của bạn...'}
           rows={5}
         />
       </div>
@@ -182,7 +213,7 @@ export default function ContactPage() {
     {
       icon: MapPin,
       title: t('footer.address'),
-      content: 'Hà Nội, Việt Nam',
+      content: t('contact.address_value'),
     },
     {
       icon: Phone,
@@ -197,7 +228,7 @@ export default function ContactPage() {
     {
       icon: Clock,
       title: t('footer.working_hours'),
-      content: 'Thứ 2-6: 8:00-17:30\nThứ 7: 8:00-12:00',
+      content: t('contact.hours_value'),
     },
   ];
 
@@ -207,7 +238,7 @@ export default function ContactPage() {
       <div className="mb-12">
         <h1 className="text-4xl font-bold mb-4">{t('contact.title')}</h1>
         <p className="text-lg text-muted-foreground">
-          Liên hệ với chúng tôi để được tư vấn và báo giá chi tiết
+          {t('contact.subtitle')}
         </p>
       </div>
 
@@ -231,30 +262,13 @@ export default function ContactPage() {
               </CardContent>
             </Card>
           ))}
-
-          {/* Map Placeholder */}
-          <Card className="overflow-hidden">
-            <div className="aspect-[4/3] bg-muted relative">
-              <img
-                src="https://images.unsplash.com/photo-1524661135-423995f22d0b?w=800"
-                alt="Map"
-                className="object-cover w-full h-full opacity-50"
-              />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <MapPin className="h-8 w-8 text-primary mx-auto mb-2" />
-                  <div className="text-sm font-medium">Hà Nội, Việt Nam</div>
-                </div>
-              </div>
-            </div>
-          </Card>
         </div>
 
         {/* Contact Form */}
         <div className="lg:col-span-2">
           <Card>
             <CardHeader>
-              <CardTitle>Gửi tin nhắn cho chúng tôi</CardTitle>
+              <CardTitle>{t('contact.title')}</CardTitle>
             </CardHeader>
             <CardContent>
               <Suspense fallback={<div>Loading...</div>}>
@@ -262,43 +276,6 @@ export default function ContactPage() {
               </Suspense>
             </CardContent>
           </Card>
-        </div>
-      </div>
-
-      {/* FAQ Section */}
-      <div className="mt-16">
-        <h2 className="text-2xl font-bold mb-6">Câu hỏi thường gặp</h2>
-        <div className="grid md:grid-cols-2 gap-4">
-          {[
-            {
-              q: 'Thủ tục mua cần trục tháp như thế nào?',
-              a: 'Quy trình gồm: Tư vấn → Kiểm tra hiện trạng → Đàm phán giá → Ký hợp đồng → Thanh toán → Giao hàng',
-            },
-            {
-              q: 'Có hỗ trợ vận chuyển không?',
-              a: 'Có, chúng tôi hỗ trợ vận chuyển đến mọi tỉnh thành Việt Nam với chi phí hợp lý.',
-            },
-            {
-              q: 'Chế độ bảo hành như thế nào?',
-              a: 'Tất cả sản phẩm đều được bảo hành 12 tháng, hỗ trợ kỹ thuật trọn đời.',
-            },
-            {
-              q: 'Có hỗ trợ lắp đặt không?',
-              a: 'Có, đội ngũ kỹ thuật chuyên nghiệp sẽ hỗ trợ lắp đặt và vận hành thử.',
-            },
-          ].map((faq, index) => (
-            <Card key={index}>
-              <CardContent className="pt-6">
-                <div className="flex gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                  <div>
-                    <div className="font-semibold mb-2">{faq.q}</div>
-                    <div className="text-sm text-muted-foreground">{faq.a}</div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
         </div>
       </div>
     </div>

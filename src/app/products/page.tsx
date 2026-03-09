@@ -6,7 +6,6 @@ import { products } from '@/lib/products';
 import { ProductCard } from '@/components/product-card';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
 import { Search, SlidersHorizontal } from 'lucide-react';
 
 export default function ProductsPage() {
@@ -33,7 +32,7 @@ export default function ProductsPage() {
       <div className="mb-8">
         <h1 className="text-3xl font-bold mb-2">{t('nav.products')}</h1>
         <p className="text-muted-foreground">
-          Khám phá bộ sưu tập cần trục tháp chất lượng cao
+          {t('products.subtitle_full')}
         </p>
       </div>
 
@@ -44,7 +43,7 @@ export default function ProductsPage() {
           <div className="relative flex-1">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
             <Input
-              placeholder="Tìm kiếm theo mẫu hoặc thương hiệu..."
+              placeholder={t('products.search')}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="pl-10"
@@ -56,7 +55,7 @@ export default function ProductsPage() {
         <div className="flex flex-wrap gap-4">
           {/* Brand Filter */}
           <div className="flex items-center gap-2">
-            <span className="text-sm font-medium">Thương hiệu:</span>
+            <span className="text-sm font-medium">{t('products.brand')}:</span>
             <div className="flex gap-2 flex-wrap">
               {brands.map((brand) => (
                 <Button
@@ -65,7 +64,7 @@ export default function ProductsPage() {
                   size="sm"
                   onClick={() => setSelectedBrand(brand)}
                 >
-                  {brand === 'all' ? 'Tất cả' : brand}
+                  {brand === 'all' ? t('products.all') : brand}
                 </Button>
               ))}
             </div>
@@ -73,7 +72,7 @@ export default function ProductsPage() {
 
           {/* Condition Filter */}
           <div className="flex items-center gap-2">
-            <span className="text-sm font-medium">Tình trạng:</span>
+            <span className="text-sm font-medium">{t('products.condition_filter')}:</span>
             <div className="flex gap-2 flex-wrap">
               {conditions.map((condition) => (
                 <Button
@@ -82,7 +81,7 @@ export default function ProductsPage() {
                   size="sm"
                   onClick={() => setSelectedCondition(condition)}
                 >
-                  {condition === 'all' ? 'Tất cả' : t(`condition.${condition}` as any)}
+                  {condition === 'all' ? t('products.all') : t(`condition.${condition}` as any)}
                 </Button>
               ))}
             </div>
@@ -92,7 +91,7 @@ export default function ProductsPage() {
 
       {/* Results Count */}
       <div className="mb-4 text-sm text-muted-foreground">
-        Tìm thấy {filteredProducts.length} sản phẩm
+        {t('products.found')} {filteredProducts.length} {t('products.products_count')}
       </div>
 
       {/* Products Grid */}
@@ -105,7 +104,7 @@ export default function ProductsPage() {
       {/* No Results */}
       {filteredProducts.length === 0 && (
         <div className="text-center py-12">
-          <p className="text-muted-foreground">Không tìm thấy sản phẩm nào phù hợp.</p>
+          <p className="text-muted-foreground">{t('products.no_results')}</p>
         </div>
       )}
     </div>

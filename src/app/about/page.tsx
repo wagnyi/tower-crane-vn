@@ -16,28 +16,28 @@ export default function AboutPage() {
   const values = [
     {
       icon: Shield,
-      title: 'Chất lượng là trên hết',
-      description: 'Tất cả sản phẩm đều được kiểm định chất lượng nghiêm ngặt trước khi giao cho khách hàng.',
+      title: t('about.value_quality_title'),
+      description: t('about.value_quality_desc'),
     },
     {
       icon: Target,
-      title: 'Tận tâm phục vụ',
-      description: 'Luôn đặt lợi ích của khách hàng lên hàng đầu, hỗ trợ từ khâu tư vấn đến sau bán hàng.',
+      title: t('about.value_service_title'),
+      description: t('about.value_service_desc'),
     },
     {
       icon: Lightbulb,
-      title: 'Không ngừng đổi mới',
-      description: 'Liên tục cập nhật kiến thức và công nghệ để cung cấp giải pháp tốt nhất cho khách hàng.',
+      title: t('about.value_innovation_title'),
+      description: t('about.value_innovation_desc'),
     },
   ];
 
   const milestones = [
-    { year: '2014', event: 'Thành lập công ty, bắt đầu kinh doanh thiết bị xây dựng' },
-    { year: '2016', event: 'Trở thành đối tác chính thức của Zoomlion tại Việt Nam' },
-    { year: '2018', event: 'Mở rộng thị trường sang miền Nam, văn phòng tại TP.HCM' },
-    { year: '2020', event: 'Đạt chứng nhận ISO 9001:2015 về quản lý chất lượng' },
-    { year: '2022', event: 'Ký kết hợp tác với XCMG và SANY, mở rộng danh mục sản phẩm' },
-    { year: '2024', event: 'Phục vụ hơn 500 khách hàng, bán hơn 200 cần trục tháp' },
+    { year: '2014', event: t('milestone.2014') },
+    { year: '2016', event: t('milestone.2016') },
+    { year: '2018', event: t('milestone.2018') },
+    { year: '2020', event: t('milestone.2020') },
+    { year: '2022', event: t('milestone.2022') },
+    { year: '2024', event: t('milestone.2024') },
   ];
 
   return (
@@ -69,24 +69,20 @@ export default function AboutPage() {
 
       {/* Story */}
       <div className="mb-16">
-        <h2 className="text-2xl font-bold mb-6">Câu chuyện của chúng tôi</h2>
+        <h2 className="text-2xl font-bold mb-6">{t('about.story_title')}</h2>
         <div className="prose prose-gray max-w-none">
           <p className="text-muted-foreground leading-relaxed">
-            Tower Crane VN được thành lập vào năm 2014 với tầm nhìn trở thành nhà cung cấp thiết bị xây dựng 
-            chất lượng cao hàng đầu tại Việt Nam. Chúng tôi chuyên cung cấp cần trục tháp cũ từ các thương hiệu 
-            uy tín như Zoomlion, XCMG, SANY và nhiều thương hiệu khác.
+            {t('about.story_p1')}
           </p>
           <p className="text-muted-foreground leading-relaxed mt-4">
-            Với đội ngũ kỹ thuật giàu kinh nghiệm và quy trình kiểm định chất lượng nghiêm ngặt, 
-            chúng tôi cam kết mang đến cho khách hàng những sản phẩm chất lượng, giá cả hợp lý và 
-            dịch vụ hậu mãi tận tâm.
+            {t('about.story_p2')}
           </p>
         </div>
       </div>
 
       {/* Values */}
       <div className="mb-16">
-        <h2 className="text-2xl font-bold mb-6">Giá trị cốt lõi</h2>
+        <h2 className="text-2xl font-bold mb-6">{t('about.values_title')}</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {values.map((value, index) => (
             <Card key={index}>
@@ -108,7 +104,7 @@ export default function AboutPage() {
 
       {/* Timeline */}
       <div className="mb-16">
-        <h2 className="text-2xl font-bold mb-6">Hành trình phát triển</h2>
+        <h2 className="text-2xl font-bold mb-6">{t('about.milestones_title')}</h2>
         <div className="space-y-4">
           {milestones.map((milestone, index) => (
             <div key={index} className="flex gap-4">
@@ -130,7 +126,7 @@ export default function AboutPage() {
 
       {/* Certifications */}
       <div className="bg-muted/30 p-8 rounded-lg">
-        <h2 className="text-2xl font-bold mb-6 text-center">Chứng nhận & Đối tác</h2>
+        <h2 className="text-2xl font-bold mb-6 text-center">{t('about.certifications_title')}</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           <div className="bg-background p-6 rounded-lg text-center">
             <Award className="h-12 w-12 text-primary mx-auto mb-2" />
@@ -138,15 +134,15 @@ export default function AboutPage() {
           </div>
           <div className="bg-background p-6 rounded-lg text-center">
             <Shield className="h-12 w-12 text-primary mx-auto mb-2" />
-            <div className="font-semibold">Đối tác Zoomlion</div>
+            <div className="font-semibold">{t('about.partner_zoomlion')}</div>
           </div>
           <div className="bg-background p-6 rounded-lg text-center">
             <Shield className="h-12 w-12 text-primary mx-auto mb-2" />
-            <div className="font-semibold">Đối tác XCMG</div>
+            <div className="font-semibold">{t('about.partner_xcmg')}</div>
           </div>
           <div className="bg-background p-6 rounded-lg text-center">
             <Shield className="h-12 w-12 text-primary mx-auto mb-2" />
-            <div className="font-semibold">Đối tác SANY</div>
+            <div className="font-semibold">{t('about.partner_sany')}</div>
           </div>
         </div>
       </div>
